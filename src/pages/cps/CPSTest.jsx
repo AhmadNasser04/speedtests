@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
+import Button from '@mui/material/Button';
 
 function CPSTest() {
   const [cps, setCps] = useState(0);
@@ -25,9 +26,11 @@ function CPSTest() {
 
   return (
     <div className='bg-[#0B3295] w-screen- h-screen flex flex-col items-center justify-center space-y-5'>
-      <button ref={buttonRef} onClick={handleClick} className='w-[80vw] lg:w-[50vw] h-[50vh] bg-white rounded-lg border-2 border-dashed border-[#FF7800]'>
-        Click here
-      </button>
+      <div className='w-[80vw] lg:w-[50vw] h-[50vh] bg-white rounded-lg border-2 border-dashed border-[#FF7800]'>
+        <Button variant='text' color='primary'  ref={buttonRef} onClick={handleClick} className='w-[80vw] lg:w-[50vw] h-[50vh] bg-white rounded-lg border-2 border-dashed border-[#FF7800]'>
+          Click here
+        </Button>
+      </div>
       <div className='text-white font-bold text-2xl'><span className='text-[#FF7800]'>CPS:</span> {cps.toFixed(2)}</div>
         <div>
             <Link to='/'>

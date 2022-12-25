@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { GiSpeedometer } from 'react-icons/gi'
 
 function Footer() {
@@ -17,11 +18,11 @@ function Footer() {
                     <h1 className='text-white font-bold'>Speed Tests</h1>
                 </div>
                 <div className='flex flex-col gap-1'>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Network Test</h1>
+                    <Link to='/network'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Network Test</h1></Link>
                     <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Typing Test</h1>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Clicking Test</h1>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Reaction Test</h1>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Suggestion</h1>
+                    <Link to='/cps'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Clicking Test</h1></Link>
+                    <Link to='/reaction'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Reaction Test</h1></Link>
+                    <Link to='/suggestion'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Suggestion</h1></Link>
                 </div>
             </div>
             <div className='flex flex-col gap-5'>
@@ -29,9 +30,9 @@ function Footer() {
                     <h1 className='text-white font-bold'>Ahmad</h1>
                 </div>
                 <div className='flex flex-col gap-1'>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Portfolio</h1>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>About</h1>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Contact</h1>
+                    <a href='https://ahmadnasser.net/' target='_blank' rel='noreferrer'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Portfolio</h1></a>
+                    <a href='https://ahmadnasser.net/#about' target='_blank' rel='noreferrer'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>About</h1></a>
+                    <a href='https://ahmadnasser.net/#contact' target='_blank' rel='noreferrer'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Contact</h1></a>
                 </div>
             </div>
         </div>

@@ -9,9 +9,12 @@ export default function ReactionTest() {
   const [startTime, setStartTime] = useState(null);
   // State to track whether the box is green or not
   const [isGreen, setIsGreen] = useState(false);
-
+  // Check whether the test is started or not
+  const [isStarted, setIsStarted] = useState(false)
 
   const startTest = () => {
+    setIsStarted(true)
+
     // Generate a random delay between 2 and 8 seconds
     const delay = Math.random() * 6000 + 2000
 
@@ -19,6 +22,7 @@ export default function ReactionTest() {
     const timeoutId = setTimeout(() => {
         setStartTime(Date.now());
         setIsGreen(true);
+        setIsStarted(false)
     }, delay);
     
     // Clear the timeout when the component is unmounted
@@ -44,14 +48,14 @@ export default function ReactionTest() {
 
   return (
     <div className='bg-[#0B3295] w-screen h-screen flex flex-col items-center justify-center space-y-5'>
-      <div className='text-white font-bold text-xl'>{elapsedTime ? `Your reaction time was ${elapsedTime}ms` : 'Click when the white area turns orange'}</div>
+      <div className='text-white font-bold text-xl'>{elapsedTime ? `Your reaction time was ${elapsedTime}ms` : ''}</div>
       <div
-        className={`w-[80vw] lg:w-[50vw] h-[50vh] bg-white rounded-lg border-2 cursor-pointer border-dashed border-[#FF7800] ${isGreen && 'bg-[#FF7800]'} `}
+        className={`w-[80vw] lg:w-[50vw] h-[50vh] text-black text-2xl bg-white rounded-lg border-2 cursor-pointer border-dashed border-[#FF7800] flex items-center justify-center ${isGreen && 'bg-[#FF7800]'} `}
         style={{
             pointerEvents: isGreen ? 'auto' : 'none',
         }}
         onClick={handleClick}
-      />
+      >{isStarted ? 'Wait for orange...' : 'Press start'}</div>
       <button onClick={handleTryAgainClick} className='text-[#FFFFFF] font-semibold border-[1px] border-[#FF7800] px-5 py-2 rounded cursor-pointer hover:bg-[#FF9000] hover:border-[#FF9000] transition-all duration-300'>Start</button>
       <div>
         <Link to='/'>
