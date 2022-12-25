@@ -19,7 +19,7 @@ function Footer() {
                 </div>
                 <div className='flex flex-col gap-1'>
                     <Link to='/network'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Network Test</h1></Link>
-                    <h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Typing Test</h1>
+                    <Link to='/wpm'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Typing Test</h1></Link>   
                     <Link to='/cps'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Clicking Test</h1></Link>
                     <Link to='/reaction'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Reaction Test</h1></Link>
                     <Link to='/suggestion'><h1 className='text-[#D0E2F5] hover:text-[#FF9000] cursor-pointer transition-all'>Suggestion</h1></Link>

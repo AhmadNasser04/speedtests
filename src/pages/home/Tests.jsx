@@ -14,7 +14,7 @@ function Tests() {
         {/* Tests */}
         <div className='grid md:grid-cols-2 xl:grid-cols-4 gap-10 pb-10'>
             <TestCard tag='Test Your Network' desc="This is a test for your internet speed, both your download and upload speeds will be put to the test. Let's see what you get!" icon={networkIcon} link='/network' />
-            <TestCard tag='Test Your Typing' desc="This is a test to see how fast you can move your fingers on that keyboard of yours, Let's see what WPM you get. My best is 101!" icon={wpmIcon} />
+            <TestCard tag='Test Your Typing' desc="This is a test to see how fast you can move your fingers on that keyboard of yours, Let's see what WPM you get. My best is 101!" icon={wpmIcon} link='/wpm' />
             <TestCard tag='Test Your Clicking' desc="Ever wondered how fast you could click your mouse? No? Well, mightaswell test anyway. This is a test to see how fast you can click!" icon={cpsIcon} link='/cps' />
             <TestCard tag='Test Your Reactions' desc="Want to brag to your friends about how fast your reaction time is? Well prove it to them by doing this test, make them do it too to see just how much faster you are!" icon={reactionIcon} link='/reaction' />
         </div>
