@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .contactInput {
+        @apply outline-none bg-[#FF7800] rounded-lg px-6 py-4
+        text-white placeholder-white transition-all focus:text-[#1368E7] hover:text-[#1368E7]
+    }
+}
